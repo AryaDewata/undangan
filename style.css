@@ -260,7 +260,7 @@ header {
   align-items: center;
   gap: 12px;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("IMG/header.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("IMG/header.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -268,35 +268,65 @@ header {
   color: white;
   text-align: center;
 }
-header p:nth-child(1),
-header p:nth-child(3),
-header p:nth-child(5) {
+header img {
+  margin-bottom: -40px;
+  width: 120px;
+}
+header p:nth-child(2),
+header p:nth-child(4),
+header p:nth-child(6) {
   margin-top: 16px;
 
   font-size: 14px;
   letter-spacing: 0.2px;
 }
-header p:nth-child(5) {
-  margin: 0 0 12px;
+header p:nth-child(2)::before {
+  position: absolute;
+  top: 40%;
+  left: 110%;
+
+  width: 40px;
+  height: 2.5px;
+
+  border-radius: 2.5px;
+  background: white;
+
+  content: "";
 }
-header p:nth-child(2) {
+header p:nth-child(2):after {
+  position: absolute;
+  top: 40%;
+  right: 110%;
+
+  width: 40px;
+  height: 2.5px;
+
+  border-radius: 2.5px;
+  background: white;
+
+  content: "";
+}
+header p:nth-child(3) {
   font-size: 48px;
   font-family: "Great Vibes";
 }
-header p:nth-child(4) {
+header p:nth-child(5) {
   font-size: 28px;
   font-family: "Great Vibes";
 }
+header p:nth-child(6) {
+  margin: 0 0 12px;
+}
 @media (max-width: 768px) {
-  header p:nth-child(1),
-  header p:nth-child(3),
-  header p:nth-child(5) {
+  header p:nth-child(2),
+  header p:nth-child(4),
+  header p:nth-child(6) {
     font-size: 20px;
   }
-  header p:nth-child(5) {
+  header p:nth-child(3) {
     margin: 0 0 16px;
   }
-  header p:nth-child(4) {
+  header p:nth-child(5) {
     font-size: 24px;
   }
 }
@@ -304,18 +334,18 @@ header p:nth-child(4) {
   header {
     background-size: 350%;
   }
-  header p:nth-child(1),
-  header p:nth-child(3),
-  header p:nth-child(5) {
+  header p:nth-child(2),
+  header p:nth-child(4),
+  header p:nth-child(6) {
     font-size: 16px;
   }
-  header p:nth-child(1) {
+  header p:nth-child(2) {
     font-size: 22px;
   }
-  header p:nth-child(2) {
+  header p:nth-child(3) {
     font-size: 34px;
   }
-  header p:nth-child(4) {
+  header p:nth-child(5) {
     font-size: 22px;
   }
 }
@@ -580,11 +610,11 @@ header p:nth-child(4) {
   font-size: 14px !important;
 }
 .protokol-kesehatan div img {
-  width: 70%;
+  width: 80px;
 }
 @media (max-width: 768px) {
   .protokol-kesehatan {
-    gap: 40px;
+    gap: 80px;
   }
   .protokol-kesehatan div {
     gap: 8px;
@@ -611,11 +641,12 @@ header p:nth-child(4) {
     gap: 12px;
   }
   .protokol-kesehatan div img {
-    height: 120px;
+    height: 80px;
     width: auto;
   }
   .greetings {
-    font-size: 32px;
+    margin: 18px 0 80px;
+    font-size: 26px;
   }
 }
 
