@@ -25,7 +25,7 @@ if (window.innerWidth >= 768) {
   window.onscroll = function () {
     backgroundNavbar();
     let scrollTop = document.documentElement.scrollTop;
-    if (scrollTop >= 5240) {
+    if (scrollTop >= 5180) {
       navLinkActive(menuLink[4]);
     } else if (scrollTop >= 2630) {
       navLinkActive(menuLink[3]);
@@ -49,7 +49,7 @@ function backgroundNavbar() {
   } else {
     nav.style.background = "white";
     nav.style.boxShadow = "0.1px 0.1px 3px black";
-    menuLink.forEach((e) => (e.style.color = "black"));
+    menuLink.forEach((e) => (e.style.color = "rgb(100, 100, 100)"));
   }
 }
 
@@ -61,10 +61,12 @@ function navLinkActive(link) {
 // Hamburger Menu
 hamburgerButton.addEventListener("click", function () {
   document.querySelector(".menu").classList.toggle("not-active");
+  hamburgerButton.classList.toggle("close");
 });
 menuLink.forEach((e) => {
   e.addEventListener("click", function () {
     document.querySelector(".menu").classList.toggle("not-active");
+    hamburgerButton.classList.toggle("close");
   });
 });
 

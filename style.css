@@ -135,14 +135,16 @@ nav a {
 
   transition: 500ms;
 }
-nav a:hover,
+nav a:hover {
+  color: rgb(250, 160, 160) !important;
+}
 nav a.active {
   transition: 500ms;
   color: rgb(250, 160, 160) !important;
 }
 nav a::after {
-  margin: 0 auto;
-  height: 2px;
+  margin: 2.5px auto 0;
+  height: 2.5px;
   width: 0;
 
   display: block;
@@ -154,7 +156,6 @@ nav a::after {
 
   transition: width 500ms ease-in;
 }
-nav a:hover::after,
 nav a.active::after {
   width: 60%;
 }
@@ -199,7 +200,7 @@ nav a.active::after {
   .menu a {
     font-size: 20px;
 
-    color: black;
+    color: rgb(100, 100, 100);
   }
   .hamburger-btn {
     z-index: 101;
@@ -215,6 +216,24 @@ nav a.active::after {
 
     background: var(--main-color);
     border-radius: 6px;
+
+    transition: 500ms;
+  }
+  .hamburger-btn.close span:nth-child(1) {
+    margin-top: 10px;
+    width: 38px;
+
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(-7px, -8px);
+  }
+  .hamburger-btn.close span:nth-child(2) {
+    width: 38px;
+
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+  }
+  .hamburger-btn.close span:nth-child(3) {
+    opacity: 0%;
   }
 }
 @media (max-width: 480px) {
@@ -398,6 +417,7 @@ header p:nth-child(4) {
 
   background: rgba(255, 255, 255, 0.9);
 
+  color: rgb(100, 100, 100);
   text-align: center;
 }
 .map p:nth-child(2) {
