@@ -73,10 +73,27 @@ a {
 }
 
 /*
+<========= Scroller Style =========>
+*/
+::-webkit-scrollbar {
+  width: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 3px 0.1px rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--main-color);
+  box-shadow: inset 0 0 3px 0.1px rgba(0, 0, 0, 0.1);
+}
+
+/*
 <========= Container Style =========>
 */
 section {
   padding: 86px 4px 20px !important;
+}
+.flower {
+  width: 120px;
 }
 .header-text {
   margin-bottom: 20px;
@@ -269,9 +286,8 @@ header {
   color: white;
   text-align: center;
 }
-header img {
+header .flower {
   margin-bottom: -40px;
-  width: 120px;
 }
 header p:nth-child(2),
 header p:nth-child(4),
@@ -597,8 +613,11 @@ header p:nth-child(6) {
   width: max-content;
 }
 .comment-list {
+  padding: 8px;
   margin: 22px auto 0;
   width: 40%;
+  height: 200px;
+  overflow-y: scroll;
 
   display: flex;
   flex-direction: column;
@@ -661,6 +680,7 @@ header p:nth-child(6) {
   }
   .comment-list {
     width: 85%;
+    height: 300px;
 
     gap: 22px;
   }
