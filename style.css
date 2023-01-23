@@ -238,17 +238,16 @@ nav a.active::after {
     transition: 500ms;
   }
   .hamburger-btn.close span:nth-child(1) {
-    margin-top: 10px;
     width: 38px;
 
-    transform-origin: 0 0;
-    transform: rotate(45deg) translate(-7px, -8px);
+    transform-origin: 100% 0;
+    transform: rotate(-45deg);
   }
   .hamburger-btn.close span:nth-child(2) {
     width: 38px;
 
-    transform-origin: 0 100%;
-    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(0, -20px);
   }
   .hamburger-btn.close span:nth-child(3) {
     opacity: 0%;
@@ -608,6 +607,10 @@ header p:nth-child(6) {
   font-family: "Josefin Sans";
   letter-spacing: 0.2px;
 }
+.comment input::placeholder,
+.comment textarea::placeholder {
+  color: rgb(180, 180, 180);
+}
 .comment .btn {
   margin: 8px auto 0;
   width: max-content;
@@ -622,6 +625,9 @@ header p:nth-child(6) {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+.comment-list::-webkit-scrollbar {
+  border-radius: 8px;
 }
 .comment-list .card {
   display: flex;
@@ -677,6 +683,17 @@ header p:nth-child(6) {
 @media (max-width: 480px) {
   .comment {
     width: 85%;
+  }
+  .comment textarea::-webkit-resizer {
+    border-top-left-radius: 8px;
+    border-top: 1px solid var(--main-color);
+    border-left: 1px solid var(--main-color);
+    background: rgb(250, 170, 170, 0.5);
+  }
+  .comment .btn {
+    padding: 12px 18px;
+
+    font-size: 16px;
   }
   .comment-list {
     width: 85%;
@@ -815,8 +832,8 @@ footer a {
 }
 @media (max-width: 480px) {
   .music-btn {
-    bottom: 35px;
-    right: 35px;
+    bottom: 20px;
+    right: 20px;
 
     font-size: 28px;
   }
