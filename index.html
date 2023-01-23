@@ -157,80 +157,16 @@
             <!-- Comment -->
             <div class="comment scroll-element js-scroll fade-in-bottom">
                 <label for="name">Nama</label>
-                <input type="text" id="name" placeholder="Ketik nama kamu..." maxlength="200" autocomplete="off">
+                <input type="text" id="name" placeholder="Ketik nama kamu..." maxlength="100" autocomplete="off">
                 <label for="message">Pesan & Kesan</label>
-                <textarea id="message" rows="4" maxlength="200"
+                <textarea id="message" rows="4" maxlength="100"
                     placeholder="Ketik pesan dan kesan yang ingin disampaikan..." autocomplete="off"></textarea>
-                <a href="#" class="btn" title="Klik untuk mengirim pesan">Kirim Pesan <i style="margin-left: 2px;"
-                        class="fas fa-paper-plane"></i></a>
+                <a id="send-message" class="btn" title="Klik untuk mengirim pesan">Kirim Pesan <i
+                        style="margin-left: 2px;" class="fas fa-paper-plane"></i></a>
             </div>
 
             <!-- Comment List -->
-            <div class="comment-list scroll-element js-scroll fade-in-bottom">
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Ketut Wiresata</p>
-                        <p>Semoga atjaranja berdjalan dengan lantjar</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Luh Sarini</p>
-                        <p>Semoga mendjadi anak jang berbakti kepada orang toea</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Dewi Sartika</p>
-                        <p>Sehat selaloe oentoek Gede dan keloearga</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Made Suwela</p>
-                        <p>Semoga kelak mendjadi anak jang bermanfaat oentoek masjarakat</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Nyoman Sudibya</p>
-                        <p>Semoga selaloe diberikan kesehatan</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Putu Indah Eka Suryani</p>
-                        <p>Semoga atjaranja berdjalan dengan lantjar</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Alit Santosa</p>
-                        <p>Sehat selaloe dan diberi oemoer jang pandjang</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Gede Sudira</p>
-                        <p>Semoga mendjadi anak jang berbakti kepada orang toea</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fas fa-user"></i>
-                    <div class="message talk-bubble tri-right left-top">
-                        <p class="name">Nengah Kompyang</p>
-                        <p>Semoga dilantjarkan redjekinja</p>
-                    </div>
-                </div>
-            </div>
+            <div class="comment-list scroll-element js-scroll fade-in-bottom"></div>
 
         </section>
 
@@ -279,6 +215,7 @@
 
     <!-- Javascript -->
     <script src="script.js"></script>
+    <script src="greetings.js"></script>
 
 </body>
 
